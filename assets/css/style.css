@@ -41,6 +41,16 @@ a {
     text-decoration: none;
 }
 
+/* section {
+    margin: 60px 0;
+} */
+
+/* .container {
+    width: 100%;
+    padding: 0 79px;
+    margin: 0;
+} */
+
 .btn {
     background-color: var(--main-color);
     border-radius: 50px;
@@ -80,7 +90,6 @@ a {
 
 
 /* ============ header ============ */
-
 header {
     width: 100%;
     position: fixed; 
@@ -103,12 +112,12 @@ header .container {
     width: 100%;
 }
 
-
 .brand h2 {
     font-size: 2rem;
     text-transform: uppercase;
     color: var(--bg-light);
 }
+
 .brand h2 span {
     color: var(--title-color);
 }
@@ -176,27 +185,6 @@ header .container {
 }
 
 @media only screen and (max-width: 768px) {
-
-    .nav-menu {
-        position: absolute;
-        top: 79px;
-        right: -200px;
-        background: var(--main-color);
-        flex-direction: column;
-        width: 200px;
-        height: 400px;
-        padding-top: 50px;
-        row-gap: 20px;
-        transition: .4s;
-    }
-    .menu-active {
-        right: 0;
-    }
-
-    .header_content .menu-bar {
-        display: block;
-    }
-
     .header_content {
         display: flex;
         align-items: center;
@@ -204,4 +192,173 @@ header .container {
         padding: 15px 0;
         width: 100%;
     }
+    .header_content .menu-bar {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: absolute;
+        top: 136px;
+        right: 45px;
+        background: var(--main-color);
+        flex-direction: column;
+        width: 200px;
+        height: 345px;
+        padding-top: 50px;
+        row-gap: 25px;
+        transition: .4s;
+    }
+
+    .header_content .menu-active {
+        display: none;
+    }
+
 }
+/* End Hero Section */
+
+/* ============ home ============ */
+.home {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.home .container {
+    height: 100%;
+    width: 100%;
+    padding: 0 79px;
+    margin: 0;
+}
+
+.animation-home {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.content_home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 200px;
+}
+
+.content_home .left-details h4 {
+    color: var(--main-color);
+    font-size: 20px;
+}
+
+.content_home .left-details h2 {
+    margin: 10px 0 20px 0;
+    font-size: 40px;
+}
+
+.content_home .left-details h1 {
+    font-size: 48px;
+}
+
+.content_home .left-details p {
+    margin: 20px 0 30px;
+}
+
+.content_home .right-details {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+.content_home .right-details > img {
+    padding-right: 10em;
+    width: 30em;
+    height: 30em;
+    border-radius: 50%;
+}
+
+.content_home .right-details .img-tools img {
+    width: 30px;
+    position: absolute;
+    animation: animateTwo 4s linear infinite;
+    /* display: none; */
+}
+
+@keyframes animateTwo {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+}
+
+.content_home .right-details .img-tools img:nth-child(1) {
+    bottom: 100px;
+    right: 70px;
+    width: 80px;
+
+}
+
+.content_home .right-details .img-tools img:nth-child(2) {
+    top: 50px;
+    right: 100px;
+    width: 70px;
+    animation-delay: 1s;
+}
+
+.content_home .right-details .img-tools img:nth-child(3) {
+    top: 150px;
+    right: 500px;
+    animation-delay: .8s;
+}
+
+.footer-home {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 130px;
+    padding: 0 200px 0 100px;
+}
+
+.footer-home .social-icon {
+    display: flex;
+    column-gap: 20px;
+    font-size: 20px;
+}
+
+.footer-home .social-icon a {
+    color: var(--description-color);
+    transition: .2s;
+}
+
+.footer-home .social-icon a:hover {
+    color: var(--main-color);
+}
+
+.footer-home .mouse {
+    display: flex;
+    align-items: center;
+    animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.footer-home .mouse i {
+    font-size: 30px;
+    color: var(--main-color);
+}
+
+.footer-home .mouse span {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--description-color);
+}
+
